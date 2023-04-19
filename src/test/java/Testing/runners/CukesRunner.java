@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "Testing/step_definitions",
-        dryRun = true,
+        dryRun = false,
         tags ="",
         publish = true // generating report with public link
         // monochrome = true, changes color
