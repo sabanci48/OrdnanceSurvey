@@ -1,0 +1,29 @@
+Engagement Services – Test Analyst/Engineer Tech Task
+
+To help us understand your technical capabilities and the use of automation frameworks and tools, we would like you to complete
+ one or more of the following tasks.
+During your interview you will be allocated time to provide a demonstration of your work and approach, detailing how you created
+the frameworks or used the client tools to achieve the goal. We would like the created frameworks or use of tools to work during
+your demonstration but is not required as long as you have demonstrated a good understanding and have shown a sound approach.
+
+
+Task 1:
+• Create a new Selenium framework using your chosen language (Java/Python/C# etc….) within your preferred IDE.
+• Create a single Cucumber feature file to verify the below scenario.
+• Configure the framework to execute the test scenario against the Chrome browser. You need to show how to trigger this
+manually and also via the build process.
+• Provide details related to test reports produced by the test execution.
+
+Scenario:
+Using the URL https://osdatahub.os.uk/, verify specific items/objects are loaded onto the page.
+Navigate through the header menu including verification steps to confirm that the correct page is showing and that
+the page objects are displayed. For the ‘Docs’ page, verify the items on the side menu and verify the links shown when
+you expand the listed sections under ‘OS Data Hub documentation’ e.g. ‘OS Downloads API’, ‘OS Features API’,
+ ‘OS Linked Identifiers API’ etc……
+
+
+Task 2:
+• Using the following API endpoint, and a library such as REST Assured within an IDE of your choice, create a set of automated
+test scenarios to verify the response status and its payload including the returned attributes and corresponding values.
+Note: you don’t have to verify all of the payload, just a portion of it.
+https://api.os.uk/downloads/v1
