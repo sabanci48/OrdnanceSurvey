@@ -1,5 +1,6 @@
 package Testing.step_definitions;
 
+import Testing.page.DocsPage;
 import Testing.page.HomePage;
 import Testing.utilities.ConfigurationReader;
 import Testing.utilities.Driver;
@@ -14,10 +15,13 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrdnanceStepDef {
 
     HomePage homePage = new HomePage();
+    DocsPage docsPage= new DocsPage();
 
     @Given("user is on the home page")
     public void user_is_on_the_home_page() {
@@ -42,7 +46,54 @@ public class OrdnanceStepDef {
         homePage.clickModuleName(ModuleName);
     }
     @Then("user see the side menu below")
-    public void user_see_the_side_menu_below(io.cucumber.datatable.DataTable dataTable) {
+    public void user_see_the_side_menu_below(List<String> expectedList) {
+
+
+        System.out.println("docsPage.setSideMenu() = " + DocsPage.setSideMenu());
+
+        for (String each : expectedList) {
+            Assert.assertTrue(DocsPage.setSideMenu().contains(each) );
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /*
+
+        System.out.println("expectedList = " + expectedList);
+
+        System.out.println("docsPage.setSideMenu() = " + docsPage.setSideMenu());
+
+        System.out.println("docsPage.sideMenu = " + docsPage.sideMenu);
+
+        for (WebElement eachSideMenu : docsPage.sideMenu) {
+            System.out.println("eachSideMenu.getText() = " + eachSideMenu.getText());
+
+        }
+
+
+
+        System.out.println("docsPage.setSideMenu() = " + docsPage.setSideMenu());
+
+        for (String each : expectedList) {
+            Assert.assertTrue(docsPage.setSideMenu().contains(each));
+
+
+        }
+
+        */
+
+
+
+
 
 
     }

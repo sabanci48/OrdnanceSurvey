@@ -16,7 +16,23 @@ public class DocsPage {
     }
 
 
+    //li[contains(@id, 'Menu')]
 
+    // public List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//li[contains(@id, 'Menu')]"));
+
+
+
+    public static List<String> setSideMenu(){
+        List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//li[contains(@id, 'Menu')]"));
+
+        List<String> sideMenuItems = new ArrayList<>();
+        for (WebElement eachElement : elements) {
+            sideMenuItems.add(eachElement.getText());
+        }
+
+        return sideMenuItems;
+
+    }
 
 
 }
