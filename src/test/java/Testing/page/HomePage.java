@@ -14,10 +14,14 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(id="ccc-notify-accept")
+    public WebElement cookieAccept;
+
+
    // @FindBy(xpath = "//button[@class='MuiButtonBase-root MuiTab-root jss7 MuiTab-textColorInherit']")
     public List<WebElement> headerModules = Driver.getDriver().findElements(By.xpath("//button[@class='MuiButtonBase-root MuiTab-root jss7 MuiTab-textColorInherit']"));
 
-    public static void headerModules1(String moduleName){
+    public void clickModuleName(String moduleName){
         List<WebElement> headerModules = Driver.getDriver().findElements
                 (By.xpath("//button[@class='MuiButtonBase-root MuiTab-root jss7 MuiTab-textColorInherit']"));
         for (int i = 0; i < headerModules.size(); i++) {

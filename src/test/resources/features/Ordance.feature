@@ -1,5 +1,5 @@
 Feature: task1
-
+@wip
   Scenario: correct page is showing and that
   the page objects are displayed.
 

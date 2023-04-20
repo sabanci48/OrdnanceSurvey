@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "Testing/step_definitions",
         dryRun = false,
-        tags ="",
+        tags ="@wip",
         publish = true // generating report with public link
         // monochrome = true, changes color
 
