@@ -24,7 +24,7 @@ public class API_automation extends TestBase {
 
         JsonPath jsonPath = given().accept(ContentType.JSON).log().uri()
                 .contentType(ContentType.JSON)
-                .when().get("/downloads/v1").prettyPeek()
+                .when().get("https://api.os.uk/downloads/v1").prettyPeek()
                 .then().statusCode(200)
                 .contentType(ContentType.JSON)
                 .body("title", is("OS Downloads API"))
