@@ -54,33 +54,28 @@ public class ApiStepDef {
 
     }
 
-    @Then("the response payload should contain the following attributes and corresponding values:")
-    public void the_response_payload_should_contain_the_following_attributes_and_corresponding_values() {
+    @Then("the response payload should contain the following {string} is {string}")
+    public void the_response_payload_should_contain_the_following_is(String attributeTitle, String valueTitle) {
 
-        response.then().body("title", Matchers.is("OS Downloads API"));
+        response.then().body(attributeTitle,Matchers.is(valueTitle));
 
+        System.out.println("attributeTitle = " + attributeTitle);
 
-
-        /*
-          public void the_response_payload_should_contain_the_following_attributes_and_corresponding_values(Map<String, String> expectedPayload) throws IOException {
-        String responseBody = response.body().string();
-        Assertions.assertTrue(responseBody.contains(expectedPayload.get("title")));
-        Assertions.assertTrue(responseBody.contains(expectedPayload.get("description")));
-         */
-
-        /*
-        public void the_response_payload_should_contain_the_following_attributes_and_corresponding_values(io.cucumber.datatable.DataTable expectedPayload) throws Exception {
-        String responseBody = response.body().string();
-        expectedPayload.asLists(String.class).forEach(item -> {
-            Assertions.assertTrue(responseBody.contains(item.get(1)));
-        });
     }
-         */
+    @Then("{string} is {string}")
+    public void is(String attributeDesc, String valueDesc) {
+
+        response.then().body(attributeDesc,Matchers.is(valueDesc));
 
 
     }
+
 
 }
 
-
+/*
+ "title": "OS Downloads API",
+    "description": "The available Download APIs offered by Ordnance Survey.
+    These provide access to bulk data through RESTful services.",
+ */
 
